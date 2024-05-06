@@ -5,14 +5,14 @@ const initialState = {
   hasMore: false,
   totalResults: 0,
   page: 0,
-  totalPages: 0,
+  totalPages: 0, 
   isFetching: false,
 };
 
-export const movieSlice = createSlice({
-  name: "movieSlice",
+export const moviesSlice = createSlice({
+  name: "moviesSlice",
   initialState,
-  reducers: {
+  reducers: { 
     getPopularMovies: (state) => {
       return {
         ...state,
@@ -26,7 +26,7 @@ export const movieSlice = createSlice({
         hasMore: action.payload.page < action.payload.total_pages,
         totalResults: action.payload.total_results,
         page: action.payload.page,
-        totalPages: action.payload.totalPages,
+        totalPages: action.payload.totalPages,  
         isFetching: false,
       };
     },
@@ -36,6 +36,6 @@ export const movieSlice = createSlice({
   },
 });
 
-export const {getPopularMovies,fetchedPopularMovies,resetState} = movieSlice.actions;
+export const { getPopularMovies, fetchedPopularMovies, resetState } = moviesSlice.actions;
 
-export default movieSlice.reducer;
+export default moviesSlice.reducer;

@@ -39,10 +39,12 @@ function Layout({children}) {
             <Img src={MovieLogo} alt="The movie logo" />
         </Link>
         <SearchMovieSuggestion/>
+        {children}
       </LayoutWrapper>
-      {children}
+      
     </ThemeProvider>
   )
 }
 
 export default Layout
+ 
