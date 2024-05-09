@@ -29,6 +29,7 @@ useEffect(()=>{
 
   return (
     movie.isFetching ? <Loader/> : <Movie movie={movie} genres={genres}/>
+    
   )
 }
 
